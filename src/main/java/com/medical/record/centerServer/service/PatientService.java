@@ -34,13 +34,4 @@ public class PatientService {
 	public Patient getPatient(int id){
 		return repository.findById(id).orElse(null);
 	}
-
-	public Patient appointDoctor(int p,int d){
-		Patient patient = repository.findById(p).orElse(null);
-		if (patient != null) {
-			patient.setDoctor(doctorRepository.findById(d).orElse(null));
-			return repository.save(patient);
-		}
-		return null;
-	}
 }

@@ -34,9 +34,4 @@ public class PatientController {
 	public String removePatient(@PathVariable int id){
 		return patientService.removePatient(id);
 	}
-
-	@GetMapping("/patient/doctor/{p}/{d}")
-	public Patient appointDoctor(@PathVariable int p,@PathVariable int d){
-		return patientService.appointDoctor(p,d);
-	}
 }
