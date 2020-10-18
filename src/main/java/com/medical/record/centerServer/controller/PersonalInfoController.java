@@ -15,6 +15,7 @@ public class PersonalInfoController {
 
 	@PostMapping("/personalInfo/add")
 	public PersonalInfo add(@RequestBody PersonalInfo personalInfo){
+		System.out.println("ankit");
 		return personalInfoService.save(personalInfo);
 	}
 

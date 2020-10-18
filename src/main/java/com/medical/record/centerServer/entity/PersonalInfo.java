@@ -1,12 +1,14 @@
 package com.medical.record.centerServer.entity;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
 @Entity
 public class PersonalInfo {
 
 	@Id
+	@GeneratedValue
 	private int id;
 	private String address;
 	private String city;

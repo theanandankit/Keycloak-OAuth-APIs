@@ -17,5 +17,4 @@ public class AppointmentController {
 	public Appointment add(@RequestBody Appointment appointment){
 		return appointmentService.save(appointment);
 	}
-
 }
