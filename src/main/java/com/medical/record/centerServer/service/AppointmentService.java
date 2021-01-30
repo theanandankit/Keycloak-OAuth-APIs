@@ -1,7 +1,7 @@
 package com.medical.record.centerServer.service;
 
-import com.medical.record.centerServer.entity.Appointment;
-import com.medical.record.centerServer.repository.AppointmentRepository;
+import com.medical.record.centerServer.Entity.Appointment;
+import com.medical.record.centerServer.Repository.AppointmentRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

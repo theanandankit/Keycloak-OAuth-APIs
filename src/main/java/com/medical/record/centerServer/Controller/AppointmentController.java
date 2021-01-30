@@ -1,6 +1,6 @@
-package com.medical.record.centerServer.controller;
+package com.medical.record.centerServer.Controller;
 
-import com.medical.record.centerServer.entity.Appointment;
+import com.medical.record.centerServer.Entity.Appointment;
 import com.medical.record.centerServer.service.AppointmentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;

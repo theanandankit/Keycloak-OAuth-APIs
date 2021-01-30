@@ -1,7 +1,7 @@
 package com.medical.record.centerServer.service;
 
-import com.medical.record.centerServer.entity.PersonalInfo;
-import com.medical.record.centerServer.repository.PersonalInfoRepository;
+import com.medical.record.centerServer.Entity.PersonalInfo;
+import com.medical.record.centerServer.Repository.PersonalInfoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

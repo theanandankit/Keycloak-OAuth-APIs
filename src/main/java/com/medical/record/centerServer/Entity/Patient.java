@@ -1,4 +1,4 @@
-package com.medical.record.centerServer.entity;
+package com.medical.record.centerServer.Entity;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
