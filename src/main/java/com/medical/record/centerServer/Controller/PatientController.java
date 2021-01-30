@@ -1,5 +1,6 @@
 package com.medical.record.centerServer.Controller;
 
+import com.medical.record.centerServer.Controller.ErrorHandling.PatientNotFoundController;
 import com.medical.record.centerServer.Entity.Patient;
 import com.medical.record.centerServer.service.PatientService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,7 +11,6 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.servlet.http.HttpServletResponse;
-import java.io.IOException;
 
 @RestController
 public class PatientController extends RuntimeException {
@@ -24,14 +24,11 @@ public class PatientController extends RuntimeException {
 	}
 
 	@GetMapping("/patient/{id}")
-	public Patient getPatient (@PathVariable int id , HttpServletResponse httpServletResponse) throws IOException {
-
+	public Object getPatient(@PathVariable int id, HttpServletResponse httpServletResponse) {
 		Patient patient = patientService.getPatient(id);
-
 		if (patient == null) {
-			httpServletResponse.sendRedirect("/errorNotFound");
+			throw new PatientNotFoundController("Patient Does Not exist with PatientId: " + id);
 		}
-
 		return patient;
 	}
 
